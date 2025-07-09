@@ -21,18 +21,16 @@ RUN apt-get update && apt-get install -y \
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy application files
+# Copy existing application directory contents
 COPY . /var/www
 
-# ✅ Install Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader
+# ✅ Install PHP dependencies using Composer
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www
 
-# Expose port
+# Expose port 8000 and start Laravel server
 EXPOSE 8000
-
-# Start Laravel
 CMD php artisan serve --host=0.0.0.0 --port=8000

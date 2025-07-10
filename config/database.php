@@ -65,18 +65,18 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DATABASE_URL'postgresql://ebroker_user:r2GvcfoHw8YWgXsrVUIDCNgjBWQ99lWt@dpg-d1nf7qre5dus73apv370-a/ebroker_db'),
+            'host' => env('DB_HOST', 'dpg-d1nf7qre5dus73apv370-a'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'ebroker_db'),
+            'username' => env('DB_USERNAME', 'ebroker_user'),
+            'password' => env('DB_PASSWORD', 'r2GvcfoHw8YWgXsrVUIDCNgjBWQ99lWt'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => 'prefer',
-        ],
+       ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

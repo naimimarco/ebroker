@@ -65,7 +65,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'postgresql://ebroker_user:r2GvcfoHw8YWgXsrVUIDCNgjBWQ99lWt@dpg-d1nf7qre5dus73apv370-a/ebroker_db'),
+            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'dpg-d1nf7qre5dus73apv370-a'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'ebroker_db'),

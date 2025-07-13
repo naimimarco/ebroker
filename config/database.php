@@ -66,7 +66,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'dpg-d1nf7qre5dus73apv370-a'),
+            'host' => env('DB_HOST', 'dpg-d1nf7qre5dus73apv370-a.frankfurt-postgres.render.com'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'ebroker_db'),
             'username' => env('DB_USERNAME', 'ebroker_user'),
